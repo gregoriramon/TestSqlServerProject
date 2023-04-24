@@ -2,6 +2,7 @@
 DECLARE cProducts  CURSOR  FOR
 SELECT * FROM [dbo].Products;
 
+
 DECLARE @Status int = CURSOR_STATUS('global','cProducts');
 OPEN GLOBAL cProducts;
 SELECT @Status = CURSOR_STATUS('global','cProducts') ;
